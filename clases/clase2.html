@@ -4,114 +4,102 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Clase 02 - CONTROL DE FLUJOS</title>
 </head>
 <body>
     
 
 
-    <!-- ----------------Js--------------- -->
+
+    <!-- ----------JS---------- -->
     <script>
-        /*       let flag = false;
-  
-        if (flag) {
-          console.log(flag);
-        }
-  
-        let puntaje = 1000;
-  
-        if (puntaje == 1000) {
-          console.log("sos 1000");
-        } else {
-          console.log("no sos 1000");
-        }
-  
-        console.log("===========Cambio========================");
-        puntaje = 1000;
-  
-        if (puntaje !== 1000) {
-          console.log("no sos mil");
-        } else {
-          console.log(1000);
-        }
-  
-        console.log("===========Cambio========================");
-  
-        let nombreUsuario = prompt("Ingrese nombre usuario");
-  
-        if (nombreUsuario == "") {
-          document.write("No ingresaste usuario");
-        } else {
-          document.write("Nombre de usuario " + nombreUsuario);
-        }
-   */
-        /* if (false) {
-          console.log("cambio de nivel");
-        }
-  
-        console.log("Aca voy a entrar siempre");
-  
-        console.log(1 == 1);
-        console.log(1 == 2);
-        console.log(1 == "1");
-  
-        console.log(1 === "1");
-        console.log(1 === 1);
-  
-        let uno = 1
-  
-        console.log(uno == "1")
-        console.log(uno === 1)
-        console.log(uno === "1") */
-  
-        /*       let rol = "ADMIN";
-  
-        if (rol === "ADMIN") {
-          document.write("Privilegios de Administrador");
-        } else if (rol === "USUARIO") {
-          document.write("Privilegio de Usuario");
-        } else if(rol === 'ADMIN') {
-            document.write('sos dodos veces ADMIN')
-        } else {
-          document.write("Usuario Invitado");
-        } 
+        /*let cantidad = 5;
+
+        if (cantidad == 5){
+            console.log("Vas a ver esta cantidad")
+        };
+
+        if (cantidad == 6){
+            console.log("No vas a ver nada")
+        };
+
+        let unColor = "Rojo"
         
-  
-        let usuario = true;
-        let capacidadPago = false;
-  
-        if (usuario && capacidadPago) {
-          document.write("Tu pedido se realizo con exito");
-        } else if (usuario != true) {
-          document.write("Debe iniciar sesion");
+        if (unColor == "Rojo"){
+            console.log("El color es Rojo");
+        }else{
+            console.log("El color NO es Rojo");
+        }*/ 
+
+        //-----------------------------------------------
+
+        /*let nombreUsuario = prompt("Ingresar Nombre de Usuario");
+        if (nombreUsuario == "") {
+            console.log("No ingresaste nombre de usuario");
         } else {
-          document.write("Error de pago");
+            alert("nombre de usuario ingresado: " + nombreUsuario);
+        }*/ 
+
+        //-----------------------------------------------
+
+        /*let precio = prompt("Ingrese un precio");
+
+        if(precio < 20) {
+            alert("El precio es menor que 20");
         }
-        */
-  
-        /*let efectivo = 3000;
-        let credito = 4000;
-        let disponible = efectivo + credito;
-  
-        let total = 5000;
-  
-        if (efectivo > total || credito > total) {
-          document.write("Podes pagar con efectivo o credito");
-        } else if (disponible >= total) {
-          document.write("Paga con los dos juntos");
+        
+        else if(precio < 50) {
+            alert("El precio es menor que 50");
+        }
+
+        else if(precio < 100) {
+            alert("El precio es menor que 100");
+        }
+
+        else {
+            alert("El precio es mayor que 100");
+        }*/ 
+
+        //-----------------------------------------------
+
+        /*let esValida = true;
+        let numero = 10;
+        let esMayor5 = (numero > 5);
+
+        if(esValida) {
+            alert("Es boolean true");
+        }*/ 
+
+        //-----------------------------------------------
+
+        /*let nombreIngresado = prompt("Ingrese su Nombre");
+        let apellidoIngresado = prompt("Ingrese su Apellido");
+
+        if((nombreIngresado != "") && (apellidoIngresado != "")){
+            alert("Nombre: " + nombreIngresado + "Apellido: " + apellidoIngresado);
         } else {
-          document.write("no podes pagar");
+            alert("Error: ingresar Nombre y Apellido");
+        }*/ 
+
+        //------------------------------------------------
+
+        
+        /*let nombreIngresado   = prompt("Ingresar nombre");
+
+        if((nombreIngresado == "ANA") || (nombreIngresado =="ana")){
+            alert("Acceso concedido"); 
+        } else{
+        alert("Ud. no tiene acceso."); 
         }*/
 
-        let nombreIngreado = prompt('Ingresar nombre');
-        if ((nombreIngreado === "ANA") || (nombreIngreado ==="ana")){
-            document.write("Nos visitó Ana")
-        }else {
-            document.write("Alerta de los intrusos");
-        }
+        //------------------------------------------------
 
-        
 
-      </script>
+
+
+
+
+
+    </script>
 </body>
 </html>
