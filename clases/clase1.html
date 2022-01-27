@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Clase 1</title>
+</head>
+<body>
+
+
+<!-- ----------------Js--------------- -->
+    <script>
+
+                // 💻 Práctica let y const.        
+                let nombre = "Homero";
+        let apellido = "Simpson";
+        let edad = "50";
+        const dni = "33.333.555";
+        
+        let datosPersonales = nombre + " " + apellido + " " + edad + " " + dni
+
+        let auto = "bmw";
+
+        auto = "fiat";
+        /* ⚠️ dni = "27.237.887"; no se puede modificar porque es una variable "let". */
+
+        // 💻 Práctica opercaiones básica con valores numéricos.
+        let numeroA = 1;
+        let numeroB = 2;
+        const NUMEROC = 3;
+
+        let resultadoSuma = numeroA + numeroB;
+
+        let resultadoResta = numeroA - numeroB;
+
+        let resultadoProducto = numeroB * NUMEROC;
+
+        let resultadoMultiple = ((numeroA - numeroB) / numeroB) * 100;
+
+        let variacionVenta = resultadoMultiple + "%" + " " + "de ventas, respecto al mes anterior.";
+            /* Resultado en el interpretador:
+            variacionVenta
+            '-50% de ventas, respecto al mes anterior.'*/
+
+        numeroA = 10; 
+
+
+        /*let marca1 = "Trevi";
+        let marca2 = "Gelato";
+        const s = " ";
+
+        let resultado1 = marca1 + marca2
+        let resultado2 = marca1 + s + marca2*/
+
+        // let nombreIngresado = prompt("Por favor, ingrese su nombre.");
+        
+        // console.log("Mensaje de prueba");
+
+        /* let nombre = "Sebastián scandallo"
+           console.log(nombre) */
+
+        // alert("Saluda al cliente !");
+
+        /*let entrada = prompt("Ingresar una letra.");
+        let salida = entrada + " " + "ingresada";
+        alert(salida);*/
+
+        console.log("Toma pedidos");
+        let autor = "Sebastián Scandallo";
+        let curso = "JavaScript";
+        let SPACE = " ";
+        let datosAutor = autor + SPACE + curso
+        console.log(datosAutor);
+
+        alert("Tomemos una nueva orden !");
+        const numTel = prompt("Número telefónico ?");
+        const tel = prompt("Móvil o fijo ?");
+        let domic = prompt("Domicilio ?");
+        let vivienda = prompt("Casa o dpto. ?");
+        let producto = prompt("Que necesita ?");
+        let precioProducto = prompt("Ingresar precio del producto");
+        let precioAdicional = prompt("Ingresar precio sihay algun adicional.");
+        let precioEnvio = prompt("Valor del envio ?");
+        let total = parseInt(precioProducto) + parseInt(precioAdicional) + parseInt(precioEnvio);
+        alert("El total es" + SPACE + total);
+        alert("Consultar si precisa cambio !?");
+        let cliente = numTel + SPACE + tel + SPACE + domic + SPACE + vivienda;
+        console.log(cliente);
+        console.log(total);
+        console.log(producto);
+        
+
+    </script>
+</body>
+</html>
