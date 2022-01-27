@@ -86,9 +86,13 @@
         alert("El total es" + SPACE + total);
         alert("Consultar si precisa cambio !?");
         let cliente = numTel + SPACE + tel + SPACE + domic + SPACE + vivienda;
-        console.log(cliente);
-        console.log(total);
-        console.log(producto);
+        let pagaCon = prompt("Paga con ?");
+        let vuelto = pagaCon - total;
+        alert("Le enviamos $ " + vuelto + SPACE + "de vuelto. GRACIAS");
+        console.log("Datos del cliente: " + cliente);
+        console.log("Producto: " + producto);
+        console.log("Total del pedido: " + total);
+        console.log("vuelto: $ " + vuelto);
         
 
     </script>
