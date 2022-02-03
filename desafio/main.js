@@ -29,7 +29,7 @@ console.log("Toma pedidos");
         console.log("vuelto: $ " + vuelto);
         document.write( cliente + "<br>" + producto + "<br>" + total + "<br>" + vuelto);
         
-        //Sorteo:
+//Sorteo:
         let quiereSorteo = prompt("Desea participar de un sorteo? 1 = SI - 2 = NO");
         if (quiereSorteo == 1) {
             alert("Bien! ya estas participando con los últimos 3 números de tu DNI");
@@ -41,4 +41,38 @@ console.log("Toma pedidos");
         else {
             alert("LA RESUESTA NO ES VÁLIDA"); 
         }
-        
+
+// Top Ten Sabores
+    let sabores = ('');
+    for (let index = 0; index < 10; index++) {
+        sabores += prompt('Ingresa tus top 10 de sabores 🍦')+'\n';
+    } alert(sabores);
+
+// Podés adivinar cuál es el sabor mas vendido ?
+    let sabor = prompt('Podés adivinar cuál es el sabor mas vendido?');
+    while (sabor != 'frutilla') {
+        sabor = prompt('Ingresar nombre');
+    } alert('Exacto!, es: FRUTILLA 🍓');
+
+// Descubrí el top 5 de los mas vendidos.
+let entrada = prompt('Descubre el top 5 de los sabores mas vendidos. (Coloca FIN para terminar la vista.) 1 a 4');
+while (entrada != 'FIN') {
+    switch (entrada) {
+        case '1':
+            alert('Frurilla');
+            break;
+        case '2':
+            alert('Limón');
+            break;
+        case '3':
+            alert('Dulce de Leche');
+            break;
+        case '4':
+            alert('Chocolate');
+            break;
+        case '5':
+            alert('Dulce de Leche Granizado');
+            break;
+    }
+    entrada = prompt('Seleccionar productos de 1 a 5');
+}
