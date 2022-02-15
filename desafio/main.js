@@ -93,7 +93,7 @@ function salida(valor) {
 salida(procesamiento(sabor())); // Instrucciones Agrupadas*/
 
 // Redondeo
-function precio(valor) {
+/*function precio(valor) {
     return 'Disculpe pero no contamos con monedas, su importe: $' + Math.round(valor)
 }
 for(let index = 0; index < 5; index++) {
@@ -142,4 +142,115 @@ switch (seleccion) {
         break;
     default:
         break;
+}*/
+
+//----------Desafío: Incorporar Arrays--------------
+class Tienda{
+    constructor(nombreFantasia, direccion, propietario, rubro){
+        this.nombre = nombreFantasia;
+        this.direccion = direccion;
+        this.propietario = propietario;
+        this.rubro = rubro;
+    }
+    estaAbierto(hora){
+        if (((hora  >= 8) && (hora  <= 12))||((hora  >= 15) && (hora  <= 19))) {
+            return true;
+        }
+        return false;
+    }
+    
+    esPropietario(nombre){
+        return this.propietario == nombre;
+    }
+
+    transferirDinero(valor){
+        if((this.presupuesto > 0)&&(valor < this.presupuesto)){
+            this.presupuesto -= valor;
+            return valor
+        }else{
+            return 0;
+        }
+    }
 }
+const trevi1 = new Tienda("Trevi Gelatto", "Córdoba 419 PB", "Juan Lopez","Heladería");
+console.log(trevi1)
+const trevi2 = new Tienda("Trevi Gelatto", "Alameda de la F. 435", "Charly Fo","Heladería");
+console.log(trevi2)
+for (let index = 0; index < 2 ; index++) {
+    // Horario ?
+    let entrada = parseInt(prompt("INGRESAR HORA EN PUNTO"));
+    if(trevi1.estaAbierto(entrada)){
+        alert("LA TIENDA ESTA ABIERTA A LAS "+entrada)
+    }else{
+        alert("LA TIENDA ESTA CERRADA A LAS "+entrada)
+    }
+}
+
+//
+for (let index = 0; index < 2 ; index++) {
+    let entrada = prompt("INGRESAR NOMBRE DE PROPITARIO");
+if (trevi1.esPropietario(entrada)){
+    alert(entrada + " ES PROPIETARIO DE LA TIENDA " + trevi1.nombre);
+    }
+if (trevi2.esPropietario(entrada)){
+    alert(entrada + " ES PROPIETARIO DE LA TIENDA " + trevi2.nombre);
+    }
+}
+
+//
+for (let index = 0; index < 2; index++) {
+    let entrada = parseFloat(prompt("INGRESAR MONTO"));
+    if (trevi1.transferirDinero(entrada)){
+        alert("EL CLIENTE " + trevi1.nombre+ " TE PUEDE PAGAR "+entrada);
+    }
+    if (trevi2.transferirDinero(entrada)){
+        alert("EL CLIENTE " + trevi2.nombre+ " TE PUEDE PAGAR "+entrada);
+    }
+}
+
+//-------------------
+let entrada = prompt("INGRESAR SABOR (ESC fin)");
+const sabores = [];
+while (entrada != 'ESC') {
+    sabores.push(entrada);
+    entrada = prompt("INGRESAR SABOR");
+}
+for (let index = 0; index < sabores.length; index++) {
+    alert("POSICION " + index + " SABOR " + sabores[index]);
+}
+
+//
+class cliente {
+    constructor(nombre, barrio, edad, pagaEfectivo) {
+        this.nombre = nombre;
+        this.barrio = barrio;
+        this.edad = edad;
+        this.pagaEfectivo = pagaEfectivo;
+    }
+}
+const clientes = [];
+clientes.push(new cliente("JUAN", 1 , 30, true));
+clientes.push(new cliente("CARLOS", 2 , 18, false));
+clientes.push(new cliente("JAVIER", 5 , 22, true));
+clientes.push(new cliente("DARIO", 1 , 55, false));
+clientes.push(new cliente("MARIA", 9 , 14, true));
+console.log(clientes);
+
+//
+function buscarCliente(barrio, cliente){
+    return barrio.find(objeto => objeto.nombre === cliente.toUpperCase());
+}
+for (let index = 0; index < 3; index++) {
+    let busqueda = buscarCliente(clientes, prompt('INGRESAR NOMBRE DE cliente'));
+    if(busqueda != undefined){
+        alert('cliente '+busqueda.nombre+' barrio '+busqueda.barrio+' EDAD '+busqueda.edad);
+    }else{
+        alert('NO EXISTE cliente CON ESE NOMBRE');
+    }
+}
+
+
+
+
+
+
