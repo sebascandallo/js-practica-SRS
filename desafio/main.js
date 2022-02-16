@@ -145,7 +145,7 @@ switch (seleccion) {
 }*/
 
 //----------Desafío: Incorporar Arrays--------------
-class Tienda{
+/*class Tienda{
     constructor(nombreFantasia, direccion, propietario, rubro){
         this.nombre = nombreFantasia;
         this.direccion = direccion;
@@ -247,10 +247,66 @@ for (let index = 0; index < 3; index++) {
     }else{
         alert('NO EXISTE cliente CON ESE NOMBRE');
     }
+}*/
+
+// ----------Primera entrega del Proyecto Final-------------
+/*let usuario = localStorage.getItem('nombre');
+if (usuario == null) {
+    localStorage.setItem('nombre', prompt('INGRESAR NOMBRE'));
+} else {
+    alert('EL NOMBRE ES ' + usuario);
+}*/
+
+//-----
+/*let comidas = localStorage.getItem('comidas');
+if (comidas == null) {
+    const menu = [];
+    for (let index = 0; index < 5; index++) {
+        menu.push(prompt('INGRESAR COMIDA'))
+    }
+    localStorage.setItem('comidas', menu);
+} else {
+    let menu = '';
+    const arrayComidas = comidas.split(',');
+    for (const nombreComida of arrayComidas) {
+        menu += nombreComida + '\n';
+    }
+    alert(menu);
+}*/
+
+//-----
+class Helados {
+    constructor(nombre, precio, sabores, combo) {
+        this.nombre = nombre;
+        this.precio = parseFloat(precio);
+        this.sabores = sabores;
+        this.combo = parseInt(combo);
+    }
+}
+const helados = [];
+helados.push(new Helados("Copa Oreo", 350, ['Helado', 'Galletita', 'Salsa'], 1));
+helados.push(new Helados("Batido al Agua", 250, ['Helado', 'Agua', 'Galletita'], 0));
+helados.push(new Helados("Smoothie", 350, ['Helado', 'Leche', 'Salsa'], 2));
+helados.push(new Helados("Cuarto full", 450, ['Helado', 'Topping', 'Salsa'], 5));
+helados.push(new Helados("Lemonchamp", 550, ['Helado de limón', 'Espumante'], 7));
+localStorage.setItem('helados', JSON.stringify(helados));
+
+
+//------
+let almacenadas = localStorage.getItem('helados');
+if (almacenadas != null) {
+    let array = JSON.parse(almacenadas);
+    let salida = 'SELECCIONAR POSTRE \n';
+    for (let index = 0; index < array.length; index++) {
+        salida += index + ' -> ' + array[index].nombre + ' ' + array[index].sabores + ' $ ' + array[index].precio + '\n';
+    }
+    alert(salida);
+    let eleccion = parseInt(prompt('INGRESAR POSTRE'));
+    if ((eleccion >= 0) && (eleccion < array.length)) {
+        alert("POSTRE SELECCIONADO " + array[eleccion].nombre)
+    } else {
+        alert("ERROR DE SELECCION");
+    }
 }
 
-
-
-
-
-
+console.log(helados)
