@@ -250,32 +250,9 @@ for (let index = 0; index < 3; index++) {
 }*/
 
 // ----------Primera entrega del Proyecto Final-------------
-/*let usuario = localStorage.getItem('nombre');
-if (usuario == null) {
-    localStorage.setItem('nombre', prompt('INGRESAR NOMBRE'));
-} else {
-    alert('EL NOMBRE ES ' + usuario);
-}*/
 
 //-----
-/*let comidas = localStorage.getItem('comidas');
-if (comidas == null) {
-    const menu = [];
-    for (let index = 0; index < 5; index++) {
-        menu.push(prompt('INGRESAR COMIDA'))
-    }
-    localStorage.setItem('comidas', menu);
-} else {
-    let menu = '';
-    const arrayComidas = comidas.split(',');
-    for (const nombreComida of arrayComidas) {
-        menu += nombreComida + '\n';
-    }
-    alert(menu);
-}*/
-
-//-----
-class Helados {
+/*class Helados {
     constructor(nombre, precio, sabores, combo) {
         this.nombre = nombre;
         this.precio = parseFloat(precio);
@@ -309,4 +286,20 @@ if (almacenadas != null) {
     }
 }
 
-console.log(helados)
+console.log(helados)*/
+
+// -------DOM-------
+//CREANDO EL BOTÓN DESDE JS
+const btnSabores = document.createElement("button");
+//ASIGNAR ID AL BOTÓN
+btnSabores.id = 'btnSabores';
+//ASIGNAR EL INTERIOR DEL BOTÓN
+btnSabores.innerHTML = 'SABORES';
+//ESCUCHAR EL EVENTO CLICK
+btnSabores.addEventListener('click', function () {
+    const h3 = document.createElement('h3');
+    h3.innerHTML = 'FRUTILLA </br> ANANA </br> LIMON </br> CHOCOLATE </br> DULCE DE LECHE </br> VAINILLA </br> TRAMONTANA';
+    document.body.appendChild(h3);
+})
+//AGREGAR EL BOTON AL DOM
+document.body.appendChild(btnSabores);
