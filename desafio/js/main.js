@@ -348,8 +348,15 @@ function mostrarHelados() {
         tituloHelado.classList.add('tituloHelado');
         tituloHelado.textContent = producto.name
 
-        console.log(tituloHelado);
+        const btnAgregar = document.createElement('button');
+        btnAgregar.classList.add('btnFav');
+        btnAgregar.textContent = "Agragar a favorito"
 
+        divHelado.appendChild(imgHelado);
+        divHelado.appendChild(tituloHelado);
+        divHelado.appendChild(btnAgregar);
+
+        containerHelados.appendChild(divHelado);
     }
 }
 
