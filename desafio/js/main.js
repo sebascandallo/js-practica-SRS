@@ -336,5 +336,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //Funciones
 function mostrarHelados() {
-    
+    for (const producto of productos) {
+        const divHelado = document.createElement('div');
+        divHelado.classList.add('card');
+
+        const imgHelado = document.createElement('img');
+        imgHelado.classList.add('imagenHelado');
+        imgHelado.src = producto.img;
+        
+        const tituloHelado = document.createElement('h2');
+        tituloHelado.classList.add('tituloHelado');
+        tituloHelado.textContent = producto.name
+
+        console.log(tituloHelado);
+
+    }
 }
+
