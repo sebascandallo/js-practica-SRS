@@ -330,6 +330,11 @@ const listadoSaboresFav = document.querySelector('.listadoSaboresFav');
 console.log(listadoSaboresFav);
 
 // Eventos
-
+document.addEventListener('DOMContentLoaded', () => {
+    mostrarHelados();
+})
 
 //Funciones
+function mostrarHelados() {
+    
+}
