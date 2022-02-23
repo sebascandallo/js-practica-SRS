@@ -303,3 +303,33 @@ btnSabores.addEventListener('click', function () {
 })
 //AGREGAR EL BOTON AL DOM
 document.body.appendChild(btnSabores);
+
+// ----------
+// Variables
+const productos = [
+    {
+        id:1,
+        name : "Cucu 1",
+        img : "./images/cucu1.jpg"
+    },
+    {
+        id:2,
+        name : "Cucu 2",
+        img : "./images/cucu2.jpg"
+    },
+    {
+        id:3,
+        name : "Cuarto",
+        img : "./images/cuarto.jpg"
+    },
+]
+
+const containerHelados = document.querySelector('.containerHelados');
+console.log(containerHelados);
+const listadoSaboresFav = document.querySelector('.listadoSaboresFav');
+console.log(listadoSaboresFav);
+
+// Eventos
+
+
+//Funciones
