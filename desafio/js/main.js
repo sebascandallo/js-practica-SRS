@@ -401,3 +401,87 @@ function mostrarFavoritos(arregloFavoritos){
         listadoSaboresFav.appendChild(divHelado);
     }
 }
+
+// -------------------
+const usuario = {
+    nombre: "Juan Perez",
+    edad: 22
+  }
+
+const permiso = (usuario.edad >= 18) ? true : false
+permiso ? alert("Puede pagar con tarjeta") : alert("Debe ser Mayor para abonar con tarjeta")
+
+const registroPago = usuario.edad >= 18 && new Date()
+console.log(registroPago)
+
+//----------
+const usuarioNuevo = null
+
+console.log( usuario || "El usuario no existe" )
+console.log( usuarioNuevo || "El usuario no existe" )
+
+const carrito = JSON.parse(localStorage.getItem('carrito')) || [] // Simplificado
+
+//---
+const usuario1 = {
+    nombre: "Ramon Dominguez",
+    edad: 32,
+    telefono: {
+        cel: 113334444,
+        casa: null,
+        trabajo: 113325555
+    }
+}
+
+const { nombre, telefono: {trabajo} } = usuario1
+console.log(nombre)
+console.log(trabajo)
+
+//------
+const item = {
+    item_id: 100,
+    product_name: "Helado en Pote 1kg",
+    price_per_unit: 1200
+}
+
+const {
+    item_id: id,
+    product_name: producto,
+    price_per_unit: precio
+} = item
+
+console.log(id)
+console.log(producto)
+console.log(precio)
+
+//-----
+const helado = {
+    id: 10,
+    nombre: "Pote de medio kilo",
+    precio: 600
+}
+
+const desestructurar = (item) => {
+    // desestructurando dentro del bloque
+    const {id, nombre} = item
+    console.log(id, nombre)
+}
+desestructurar(helado)
+
+//---
+const sabores = ["Frutilla", "Limon", "Chocolate", "Ananá"]
+
+const [a, b, c, d] = sabores
+
+console.log(b)
+console.log(d)
+
+//----
+const saboresRicos = ["Frutilla", "Limon", "Chocolate", "Ananá"]
+
+// spread ... del array
+console.log(...saboresRicos)
+
+//-----
+const precios = [4, 77, 92, 10, 3, 28, 54, 11]
+console.log( Math.max(...precios) )
