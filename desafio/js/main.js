@@ -304,7 +304,7 @@ btnSabores.addEventListener('click', function () {
 //AGREGAR EL BOTON AL DOM
 document.body.appendChild(btnSabores);
 
-// ----------
+// --------------------------------------------------
 // Variables
 const productos = [
     {
@@ -328,6 +328,7 @@ const containerHelados = document.querySelector('.containerHelados');
 console.log(containerHelados);
 const listadoSaboresFav = document.querySelector('.listadoSaboresFav');
 console.log(listadoSaboresFav);
+const favoritos = [];
 
 // Eventos
 document.addEventListener('DOMContentLoaded', () => {
@@ -350,7 +351,10 @@ function mostrarHelados() {
 
         const btnAgregar = document.createElement('button');
         btnAgregar.classList.add('btnFav');
-        btnAgregar.textContent = "Agragar a favorito"
+        btnAgregar.textContent = "Agregar a favorito";
+        btnAgregar.onclick = () => {
+            agregarAFavorito(producto.id)
+        };
 
         divHelado.appendChild(imgHelado);
         divHelado.appendChild(tituloHelado);
@@ -359,4 +363,12 @@ function mostrarHelados() {
         containerHelados.appendChild(divHelado);
     }
 }
+
+function agregarAFavorito(id) {
+    const comidasEncontradas = productos.find(producto => producto.id === id);
+    favoritos.push(comidasEncontradas)
+    console.log(favoritos);
+}
+
+// 3 : 12.30
 
