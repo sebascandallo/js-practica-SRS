@@ -322,6 +322,16 @@ const productos = [
         name : "Cuarto",
         img : "./images/cuarto.jpg"
     },
+    {
+        id:4,
+        name : "Cucu 1 Sin TACC",
+        img : "./images/cucu1.jpg"
+    },
+    {
+        id:5,
+        name : "Cucu 2 sin TACC",
+        img : "./images/cucu2.jpg"
+    },
 ]
 
 const containerHelados = document.querySelector('.containerHelados');
@@ -367,8 +377,27 @@ function mostrarHelados() {
 function agregarAFavorito(id) {
     const comidasEncontradas = productos.find(producto => producto.id === id);
     favoritos.push(comidasEncontradas)
-    console.log(favoritos);
+    mostrarFavoritos(favoritos);
 }
 
-// 3 : 12.30
+function mostrarFavoritos(arregloFavoritos){
 
+    listadoSaboresFav.innerHTML = "";
+    for (const producto of arregloFavoritos) {
+        const divHelado = document.createElement('div');
+        divHelado.classList.add('card');
+
+        const imgHelado = document.createElement('img');
+        imgHelado.classList.add('imagenHelado');
+        imgHelado.src = producto.img;
+        
+        const tituloHelado = document.createElement('h2');
+        tituloHelado.classList.add('tituloHelado');
+        tituloHelado.textContent = producto.name
+
+        divHelado.appendChild(imgHelado);
+        divHelado.appendChild(tituloHelado);
+
+        listadoSaboresFav.appendChild(divHelado);
+    }
+}
