@@ -297,9 +297,11 @@ btnSabores.id = 'btnSabores';
 btnSabores.innerHTML = 'SABORES';
 //ESCUCHAR EL EVENTO CLICK
 btnSabores.addEventListener('click', function () {
-    const h3 = document.createElement('h3');
+        const h3 = document.createElement('h3');
     h3.innerHTML = 'FRUTILLA </br> ANANA </br> LIMON </br> CHOCOLATE </br> DULCE DE LECHE </br> VAINILLA </br> TRAMONTANA';
     document.body.appendChild(h3);
+    Swal.fire('Estos son los mejores sabores')
+
 })
 //AGREGAR EL BOTON AL DOM
 document.body.appendChild(btnSabores);
@@ -364,6 +366,7 @@ function mostrarHelados() {
         btnAgregar.textContent = "Agregar a favorito";
         btnAgregar.onclick = () => {
             agregarAFavorito(producto.id)
+            Swal.fire('Ahora es tu favorito !!')
         };
 
         divHelado.appendChild(imgHelado);
@@ -410,6 +413,7 @@ const usuario = {
 
 const permiso = (usuario.edad >= 18) ? true : false
 permiso ? alert("Puede pagar con tarjeta") : alert("Debe ser Mayor para abonar con tarjeta")
+
 
 const registroPago = usuario.edad >= 18 && new Date()
 console.log(registroPago)
