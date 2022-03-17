@@ -489,3 +489,6 @@ console.log(...saboresRicos)
 //-----
 const precios = [4, 77, 92, 10, 3, 28, 54, 11]
 console.log( Math.max(...precios) )
+
+//----- AJAX & Fetch
+

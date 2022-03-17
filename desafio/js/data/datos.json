@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "nombre": "Seba",
+        "empresa": "Trevi",
+        "puesto": "Cafetería"
+    },
+    {
+        "id": 1000,
+        "nombre": "Marcelo",
+        "empresa": "Trevi",
+        "puesto": "Heladero"
+    },
+    {
+        "id": 40,
+        "nombre": "Martin",
+        "empresa": "Trevi",
+        "puesto": "Repostero"
+    }
+    ]
